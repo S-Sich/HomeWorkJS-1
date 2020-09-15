@@ -1,11 +1,15 @@
 'use strict';
 
-let tempCelsius = prompt('Введите температуру в градусах по Цельсию', 20);
+const tempCelsius = prompt('Введите температуру в градусах по Цельсию', 20);
+const tempCelsiusNumber = Number(tempCelsius);
+if (isNaN(tempCelsiusNumber)) {
+	alert('Это не число!');
+} else {
+	const tempFahrenheit = (9 / 5) * tempCelsius + 32;
+	alert(tempFahrenheit);
+}
 
-let tempFahrenheit;
-tempFahrenheit = (9 / 5) * tempCelsius + 32;
-
-alert(tempFahrenheit);
+//
 
 let admin;
 let name = 'Василий';
